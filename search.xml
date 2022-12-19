@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>success</title>
-    <url>/success/</url>
-    <content><![CDATA[]]></content>
+    <title>第一个博客搭建完成</title>
+    <url>/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%88%90/</url>
+    <content><![CDATA[<p>人生第一个博客搭建完成，使用的是hexo框架，next主题。效果展示：</p>
+<span id="more"></span>
+
+<p><img src="/%5Cimages%5C2022-12-19_134805.jpg" alt="博客效果图"></p>
+<p>由于才开始博客还有点粗糙，比如搜索功能比较单调：</p>
+<p><img src="/%5Cimages%5C2022-12-19_135031.jpg" alt="博客展示"></p>
+<p>打赏功能也需要完善，评论功能部署出了问题没有上线，后续会继续优化。</p>
+<p><img src="/%5Cimages%5C2022-12-19_135052.jpg" alt="博客展示"></p>
+]]></content>
+      <categories>
+        <category>个人博客</category>
+        <category>hexo</category>
+        <category>next</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>个人博客</tag>
+      </tags>
   </entry>
 </search>
