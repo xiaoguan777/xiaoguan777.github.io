@@ -23,4 +23,53 @@
         <tag>个人博客</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Markdown基础</title>
+    <url>/Markdown%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="什么是Markdown"><a href="#什么是Markdown" class="headerlink" title="什么是Markdown"></a>什么是Markdown</h2><p>Markdown 是一种轻量级标记语言，也可以称为Markdown语法，创始人为约翰·格鲁伯。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML 文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。<span id="more"></span></p>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="# 一级标题"></a># 一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="## 二级标题"></a>## 二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="### 三级标题"></a>### 三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="#### 四级标题"></a>#### 四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="##### 五级标题"></a>##### 五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="###### 六级标题"></a>###### 六级标题</h6><p>在#号后面加空格再加要写的内容构成不同类型的标题，一个#号代表一级标题，两个#代表二级标题，以此类推，最多有六级标题。要让文章显示#加空格的情况可以在#前面加转义字符\。</p>
+<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>两个换行符才能表示下一个段落，一个换行符仍然是一个段落。（在转换XHTM文件识别段落的依据）</p>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>两个**加文字加两个**或者两个下划线__加文字加两个下划线__生成粗体。效果：<strong>粗体</strong><br>一个*加文字加一个*或者一个下划线_加文字加一个下划线_生成粗体。效果：<em>斜体</em><br>注：要显示有效果意义的字符时可以在前面加\，下同。三个***或者___同上面格式为粗斜体。</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>&gt;加文字可以构成引用格式，效果如下：</p>
+<blockquote>
+<p>谢谢阅读！</p>
+</blockquote>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>单行代码可以在``中表示出来，如果要在` `中打``，则用两个`加空格加`来打，如：`` ` &#39; ``,多行代码可以用三个`多行代码加三个`来表示代码块。注意：`是反引号，键盘数字1左边的符号，不是单引号。<br>效果：<br><code>`printf(&quot;Hello world!&quot;);` </code></p>
+<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>三个或者以上的_,-和*在一排生成分割线。注意慎用减号，用减号生成分割线需要两个换行符，否者减号会和#一样的功能生成标题，三个减号生成三级标题。<br>效果：</p>
+<hr>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>格式：[网址名称](网址地址 &quot;鼠标放在网址名称上介绍网址&quot;)。注意有一个空格，直接打网址要跳转用&lt;&gt;<br>效果：</p>
+<p><a href="https://xiaoguan777.github.io/" title="小关的博客">个人博客</a><br><a href="https://xiaoguan777.github.io/">https://xiaoguan777.github.io</a></p>
+<h2 id="添加媒体"><a href="#添加媒体" class="headerlink" title="添加媒体"></a>添加媒体</h2><p>格式：![图片，视频，音频说明，图片等加载不出来时显示写的说明](媒体路径或者媒体链接地址)。比如b站视频可以点击分享使用嵌入代码，百度图片可以复制图片地址。<br>效果：</p>
+<p><img src="https://img2.baidu.com/it/u=1361506290,4036378790&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" alt="测试图片"></p>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>写html可以直接显示</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>格式：</p>
+<p>|第一列|第二列|第三列|</p>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th align="left">第一列</th>
+<th align="left">第二列</th>
+<th>第三列</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">(2,1)</td>
+<td align="left">(2,2)</td>
+<td>(2,3)</td>
+</tr>
+</tbody></table>
+<h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>next 主题的博客如果要使文章只显示一部分，可以在想要显示的一部分后面加&lt;!–more–&gt;,读者在这里点击阅读全文才能读全文。</p>
+]]></content>
+      <categories>
+        <category>写作</category>
+        <category>Markdown</category>
+        <category>计算机基础</category>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>写作</tag>
+      </tags>
+  </entry>
 </search>
