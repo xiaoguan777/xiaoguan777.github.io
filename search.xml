@@ -41,8 +41,8 @@
       <categories>
         <category>写作</category>
         <category>Markdown</category>
-        <category>计算机基础</category>
-        <category>Markdown</category>
+        <category>计算机学习</category>
+        <category>工具，Markdown</category>
       </categories>
       <tags>
         <tag>Markdown</tag>
@@ -55,11 +55,11 @@
     <content><![CDATA[<p>人生第一个博客搭建完成，使用的是hexo框架，next主题。效果展示：</p>
 <span id="more"></span>
 
-<p><img src="D:\hexo\source\images\2022-12-19_134805.jpg" alt="博客效果图"></p>
+<p><img src="/../images/2022-12-19_134805.jpg" alt="博客效果图"></p>
 <p>由于才开始博客还有点粗糙，比如搜索功能比较单调：</p>
-<p><img src="D:\hexo\source\images\2022-12-19_135031.jpg" alt="博客展示"></p>
+<p><img src="/../images/2022-12-19_135031.jpg" alt="博客展示"></p>
 <p>打赏功能也需要完善，评论功能部署出了问题没有上线，后续会继续优化。</p>
-<p><img src="D:\hexo\source\images\2022-12-19_135052.jpg" alt="博客展示"></p>
+<p><img src="/..%5Cimages%5C2022-12-19_135052.jpg" alt="博客展示"></p>
 ]]></content>
       <categories>
         <category>个人博客</category>
