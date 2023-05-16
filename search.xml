@@ -922,4 +922,40 @@
         <tag>Servlet</tag>
       </tags>
   </entry>
+  <entry>
+    <title>XML配置全局变量</title>
+    <url>/JavaWeb/xml%E9%85%8D%E7%BD%AE%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</url>
+    <content><![CDATA[<h3 id="XML配置全局变量代码"><a href="#XML配置全局变量代码" class="headerlink" title="XML配置全局变量代码"></a>XML配置全局变量代码</h3><span id="more"></span>
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">&quot;https://jakarta.ee/xml/ns/jakartaee&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">version</span>=<span class="string">&quot;6.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>pageSize<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>10<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>startIndex<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>0<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>计算机学习</category>
+        <category>Java</category>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>JavaWeb</tag>
+        <tag>XML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ServletContext</title>
+    <url>/JavaWeb/ServletContext/</url>
+    <content><![CDATA[<h3 id="ServletContext代码"><a href="#ServletContext代码" class="headerlink" title="ServletContext代码"></a>ServletContext代码</h3><span id="more"></span>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xiaoguan.learn;</span><br><span class="line"><span class="keyword">import</span> jakarta.servlet.GenericServlet;</span><br><span class="line"><span class="keyword">import</span> jakarta.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> jakarta.servlet.ServletRequest;</span><br><span class="line"><span class="keyword">import</span> jakarta.servlet.ServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"><span class="keyword">import</span> java.util.Enumeration;</span><br><span class="line"><span class="keyword">import</span> java.util.Objects;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletContext</span> <span class="keyword">extends</span> <span class="title class_">GenericServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">service</span><span class="params">(ServletRequest req, ServletResponse res)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        res.setContentType(<span class="string">&quot;text/html&quot;</span>);</span><br><span class="line">        PrintWriter out=res.getWriter();</span><br><span class="line">        jakarta.servlet.ServletContext application=<span class="built_in">this</span>.getServletContext();</span><br><span class="line">        Enumeration&lt;String&gt; strs=application.getInitParameterNames();</span><br><span class="line">        <span class="keyword">while</span> (strs.hasMoreElements())&#123;</span><br><span class="line">            String name= strs.nextElement();</span><br><span class="line">            String value=application.getInitParameter(name);</span><br><span class="line">            out.print(name+<span class="string">&quot;,&quot;</span>+value+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        String contextPath= application.getContextPath();</span><br><span class="line">        out.print(contextPath+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">realPath</span> <span class="operator">=</span> application.getRealPath(<span class="string">&quot;/index.html&quot;</span>);</span><br><span class="line">        out.print(realPath+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line">        application.log(<span class="string">&quot;大家好！&quot;</span>);</span><br><span class="line">        <span class="type">int</span> age=<span class="number">17</span>;</span><br><span class="line">        <span class="keyword">if</span>(age&lt;<span class="number">18</span>)&#123;</span><br><span class="line">            application.log(<span class="string">&quot;错误&quot;</span>,<span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">&quot;go!&quot;</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        application.setAttribute(<span class="string">&quot;test0&quot;</span>,<span class="number">12345</span>);</span><br><span class="line">        application.removeAttribute(<span class="string">&quot;test0&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">test0</span> <span class="operator">=</span> (<span class="type">int</span>) application.getAttribute(<span class="string">&quot;test0&quot;</span>);</span><br><span class="line">        out.print(test0);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>计算机学习</category>
+        <category>Java</category>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaWeb</tag>
+        <tag>Servlet</tag>
+      </tags>
+  </entry>
 </search>
